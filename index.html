@@ -8,7 +8,7 @@
 <body>
     <script>
         function getComputerChoice() {
-            choice = getRandomInt(3);
+            let choice = getRandomInt(3);
             if (choice == 0) {
                 return "rock"
             } else if (choice == 1) {
@@ -25,6 +25,15 @@
         console.log(getComputerChoice())
         console.log(getComputerChoice())
         console.log(getComputerChoice())
+
+        function getHumanChoice() {
+            let userPrompt = prompt("Rock, paper, or scissors?");
+            let choice = userPrompt.toLowerCase();
+            return choice
+        }
+
+        console.log(getHumanChoice());
+
     </script>
 </body>
 </html>
