@@ -7,8 +7,8 @@
 </head>
 <body>
     <script>
-        humanScore = 0;
-        computerScore = 0;
+        let humanScore = 0
+        let computerScore = 0;
 
         function getComputerChoice() {
             let choice = getRandomInt(3);
@@ -65,12 +65,35 @@
             }
         }
 
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+        // const humanSelection = getHumanChoice();
+        // const computerSelection = getComputerChoice();
 
-        console.log(humanSelection);
-        console.log(computerSelection);
-        playRound(humanSelection, computerSelection);
+        // console.log(humanSelection);
+        // console.log(computerSelection);
+        // playRound(humanSelection, computerSelection);
+
+        function playGame(rounds) {
+            humanScore = 0
+            computerScore = 0;
+
+            let i = 1;
+            while (i < rounds + 1) {
+                console.log('Game Number: ' + i);
+
+                humanChoice = getHumanChoice();
+                // console.log('Human Choice: ' + humanChoice);
+
+                computerChoice = getComputerChoice();
+                // console.log('Computer Choice: ' + computerChoice);
+
+                playRound(humanChoice, computerChoice);
+                console.log('Human Score: ' + humanScore);
+                console.log('Computer Score: ' + computerScore);
+                i++;
+            }
+        }
+
+        playGame(3);
 
     </script>
 </body>
